@@ -174,7 +174,7 @@ a{
     border-radius: 5px;
     transition: transform 0.3s ease;
 }
-#btn {
+.stop {
   animation: btnPulse 1s infinite alternate;
 }
 @keyframes btnPulse {
