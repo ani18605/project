@@ -30,12 +30,11 @@ let isClockRunning = true;
 const toggleClock = () => {
   isClockRunning = !isClockRunning;
   startStopButton.textContent = isClockRunning ? "Stop" : "Start";
+  if(startStopButton.textContent==stop)startStopButton.className = 'stop';
 };
 startStopButton.addEventListener("click", toggleClock);
 setInterval(() => {
   if (isClockRunning) {
     updateTime();
-    ringtone.play();
-    ringtone.loop = true;
   }
 }, 1000);
