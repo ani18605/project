@@ -14,6 +14,8 @@ function showTime() {
             h = h - 12;
             session = "PM";
         }
+        if(s<10)s="0"+s;
+        if(m<10)m="0"+m;
         var time = h + ":" + m + ":" + s + " " + session;
     }
     document.getElementById("MyClockDisplay").innerText = time;
