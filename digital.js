@@ -4,6 +4,8 @@ function showTime() {
     var h = date.getHours();
     var m = date.getMinutes();
     var s = date.getSeconds();
+     if(s<10)s="0"+s;
+    if(m<10)m="0"+m;
     var session = "AM";
     if (is24HourFormat) {
         h = (h < 10) ? "0" + h : h;
@@ -14,8 +16,7 @@ function showTime() {
             h = h - 12;
             session = "PM";
         }
-        if(s<10)s="0"+s;
-        if(m<10)m="0"+m;
+       
         var time = h + ":" + m + ":" + s + " " + session;
     }
     document.getElementById("MyClockDisplay").innerText = time;
